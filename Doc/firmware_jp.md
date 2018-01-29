@@ -1,7 +1,8 @@
 # ファームウェア
 
 下記よりダウンロードしてください。
-https://github.com/MakotoKurauchi/qmk_firmware/tree/feature/helix
+
+https://github.com/qmk/qmk_firmware/
 
 ビルドコマンドは以下のようになります。
 
@@ -9,7 +10,7 @@ https://github.com/MakotoKurauchi/qmk_firmware/tree/feature/helix
 
 ## カスタマイズ
 
-helix/rev2/keymaps/ にある default フォルダを複製して好きな名前にします。
+/keyboards/helix/rev2/keymaps/ にある default フォルダを複製して好きな名前にします。
 以後、それを修正します。
 
 ビルドコマンドは以下のようになります。
