@@ -48,13 +48,13 @@ RGBバックライトとUnderglowは、共にQMKの[RGB Lighting](https://docs.q
 Underglow（5行）の時
 
     #define RGBLED_NUM 32
-    #define RGBLIGHT_LIMIT_VAL ???
+    #define RGBLIGHT_LIMIT_VAL 120
 
 
 Underglow（4行）の時
 
-    #define RGBLED_NUM 26
-    #define RGBLIGHT_LIMIT_VAL ???
+    #define RGBLED_NUM 25
+    #define RGBLIGHT_LIMIT_VAL 130
 
 
 ## OLEDを有効にする
