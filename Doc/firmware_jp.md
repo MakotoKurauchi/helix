@@ -17,6 +17,7 @@
 2. すぐにFlashボタンを押します
 
 ![Imgur](https://i.imgur.com/dH2Wser.png)
+
 このようなメッセージが出れば書き込み終了です
 
 Helixで文字が打てるようになったでしょうか？
@@ -113,6 +114,7 @@ keymap.c
 ## 4行版に対応する
 
 キーマップ内のconfig.hに下記を追加します
+
     #undef HELIX_ROWS
     #define HELIX_ROWS 4
 
