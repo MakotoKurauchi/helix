@@ -64,20 +64,6 @@ gitに慣れている方はクローンの方が良いでしょう。
 1. インストールするパッケージを聞かれますので答えていきます（分からなければ全て`Y`とします）
 1. 終わったらmsys2を再起動します
 
-また、こちらの[PR](https://github.com/qmk/qmk_firmware/pull/2301/files?diff=unified)が取り込まれるまでは下記も追加で必要です。
-
-avrdudeのインストール
-
-    pacman --needed -S mingw-w64-x86_64-avrdude
-
-tmk_core/avr.mk の186行目(`sleep 1; \`の上)
-に下記を追加
-
-    if grep -q -s 'MINGW\|MSYS' /proc/version; then \
-      USB=`echo "$$USB" | perl -pne 's/\/dev\/ttyS(\d+)/COM.($$1+1)/e'`; \
-      echo "Remapped MSYS2 USB port to $$USB"; \
-    fi; \
-
 ## ビルドと書き込み
 
 QMKファームウェアの第一階層で以下のようにします。
