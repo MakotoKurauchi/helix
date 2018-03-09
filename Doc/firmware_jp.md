@@ -99,9 +99,8 @@ keymap.c
 
 ## 4行版に対応する
 
-キーマップ内のconfig.hに下記を追加します
+キーマップ内のconfig.hにあるHELIX_ROWSを5から4に変更します。
 
-    #undef HELIX_ROWS
     #define HELIX_ROWS 4
 
 ## RGBバックライト/ Underglow を有効にする
