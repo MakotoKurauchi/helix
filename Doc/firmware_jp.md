@@ -110,25 +110,20 @@ RGBバックライトとUnderglowは、共にQMKの[RGB Lighting](https://docs.q
 先ず、キーマップ内の rules.mk を修正して機能を有効にします。
 
     RGBLIGHT_ENABLE = yes
-
-次に config.h で使用するLEDの数と最大の明るさを設定します。
-最大の明るさを下記の推奨値以下にしないと消費電流が大きくなり過ぎますのでご注意ください。
+ 
+次に config.h で使用するLEDの数を設定します。
 
 Underglowの時
 
     #define RGBLED_NUM 6
-    #define RGBLIGHT_LIMIT_VAL 255
 
 バックライト（5行）の時
 
     #define RGBLED_NUM 32
-    #define RGBLIGHT_LIMIT_VAL 120
-
 
 バックライト（4行）の時
 
     #define RGBLED_NUM 25
-    #define RGBLIGHT_LIMIT_VAL 130
 
 
 ## OLEDを有効にする
