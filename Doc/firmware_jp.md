@@ -53,9 +53,9 @@ brew install avrdude
 
 ### Windows
 
-[msys2](https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md)を使う手順を説明します。
+[msys2](http://www.msys2.org/)を使う手順を説明します。
 
-1. [msys2](https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md)のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
+1. [msys2](http://www.msys2.org/)のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
   - 32bit OSの時 : msys2-i686-xxxxxxx.exe
   - 64bit OSの時 : msys2-x86_64-xxxxxxxx.exe
 1. msys2を起動します
@@ -110,7 +110,7 @@ RGBバックライトとUnderglowは、共にQMKの[RGB Lighting](https://docs.q
 先ず、キーマップ内の rules.mk を修正して機能を有効にします。
 
     RGBLIGHT_ENABLE = yes
- 
+
 次に config.h で使用するLEDの数を設定します。
 
 Underglowの時
