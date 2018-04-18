@@ -8,7 +8,7 @@ A compact split ortholinear keyboard.
 
 * [Build Guide (JP)](/Doc/buildguide_jp.md)
 * [Firmware (JP)](/Doc/firmware_jp.md)
-* [Useage (JP)](/Doc/useage_jp.md)
+* [Usage (JP)](/Doc/usage_jp.md)
 
 
 ## Tool & Data
