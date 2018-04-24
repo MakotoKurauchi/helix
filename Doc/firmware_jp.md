@@ -135,9 +135,18 @@ config.h の下記の定義を有効にします。（行頭の「//」を取り
 
 ### フォントデータのカスタマイズ
 フォントデータは helix/common/glcdfont.c です。
+こちらを下記のいずれかの方法で編集することでOLED表示のカスタマイズが出来ます。
 
+#### Web Toolで編集
 
-#### カスタマイズ方法
+[@teri_yakichan](https://twitter.com/teri_yakichan) さんが作成した、ブラウザでglcdfont.cを編集するツールが便利です。
+
+[Helix Font Editor](http://teripom.x0.com/)
+
+#### 画像エディタで編集
+
+画像エディタを使いたいときは、下記の手順で一旦画像化してから編集し再度テキスト化します。
+
 1. glcdfont.c からデータ部分のみを抜き出してテキストファイルを作る  
 0x00, 0x00 ... 0x00
 2. スクリプトで画像に変換する
@@ -145,17 +154,20 @@ config.h の下記の定義を有効にします。（行頭の「//」を取り
 4. スクリプトでテキストに戻す
 5. glcdfont.c に反映させる
 
-
+編集画像のイメージ
 
 ![Font](https://i.imgur.com/adJX6CX.png)
 
+スクリプトはこちらを使用します。
+https://github.com/MakotoKurauchi/helix/tree/master/FontConverter
+
 テキストから画像への変換
 
-    python3 hex2img.py inHex.txt outImage
+    $ python3 hex2img.py inHex.txt outImage
 
 画像からテキストへの変換
 
-    python3 img2hex.py inImage.bmp > outHex.txt
+    $ python3 img2hex.py inImage.bmp > outHex.txt
 
 
 
