@@ -99,38 +99,27 @@ keymap.c
 
 ## 4行版に対応する
 
-キーマップ内のconfig.hにあるHELIX_ROWSを5から4に変更します。
+キーマップ内の rules.mk にある HELIX_ROWS を 5 から 4 に変更します。
 
-    #define HELIX_ROWS 4
+    HELIX_ROWS = 4
 
-## RGBバックライト/ Underglow を有効にする
+## RGBバックライトを有効にする
 
-RGBバックライトとUnderglowは、共にQMKの[RGB Lighting](https://docs.qmk.fm/feature_rgblight.html)機能を使っているので設定は共通しています。似た名前で[Backlighting](https://docs.qmk.fm/feature_backlight.html)機能がありますがこちらは使いません。
+キーマップ内の rules.mk にある LED_BACK_ENABLE を no から yes に変更します。
 
-先ず、キーマップ内の rules.mk を修正して機能を有効にします。
+    LED_BACK_ENABLE = yes
 
-    RGBLIGHT_ENABLE = yes
+##  Underglow を有効にする
 
-次に config.h で使用するLEDの数を設定します。
+キーマップ内の rules.mk にある LED_UNDERGLOW_ENABLE を no から yes に変更します。
 
-Underglowの時
-
-    #define RGBLED_NUM 6
-
-バックライト（5行）の時
-
-    #define RGBLED_NUM 32
-
-バックライト（4行）の時
-
-    #define RGBLED_NUM 25
-
+    LED_UNDERGLOW_ENABLE = yes
 
 ## OLEDを有効にする
 
-config.h の下記の定義を有効にします。（行頭の「//」を取ります）
+キーマップ内の rules.mk にある LED_BACK_ENABLE を no から yes に変更します。
 
-    #define SSD1306OLED
+    LED_BACK_ENABLE = yes
 
 
 ### フォントデータのカスタマイズ
