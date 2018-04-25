@@ -117,9 +117,9 @@ keymap.c
 
 ## OLEDを有効にする
 
-キーマップ内の rules.mk にある LED_BACK_ENABLE を no から yes に変更します。
+キーマップ内の rules.mk にある OLED_ENABLE を no から yes に変更します。
 
-    LED_BACK_ENABLE = yes
+    OLED_ENABLE = yes
 
 
 ### フォントデータのカスタマイズ
