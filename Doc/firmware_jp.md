@@ -42,7 +42,8 @@ gitに慣れている方はクローンの方が良いでしょう。
 1. [homebrew](https://brew.sh)を使っていなかったらインストールしておきます
 1. 次に下記のコマンドをそれぞれ実行します
 
-```brew tap osx-cross/avr
+```
+brew tap osx-cross/avr
 brew tap PX4/homebrew-px4
 brew update
 brew install avr-gcc
