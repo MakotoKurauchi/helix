@@ -159,6 +159,13 @@ https://github.com/MakotoKurauchi/helix/tree/master/FontConverter
 
     $ python3 img2hex.py inImage.bmp > outHex.txt
 
+### キーマップ毎にフォントデータを用意する
+
+helix/common/glcdfont.c を修正してしまうと全てのキーマップに影響が出ます。キーマップ独自のフォントファイルを用意したい時は、まず下記のようにキーマップ内の rules.mk にある LOCAL_GLCDFONT を no から yes に変更します。
+
+    LOCAL_GLCDFONT = yes
+
+次に glcdfont.c を helixfont.h とリネームして keymap.c と同じ階層に複製します。
 
 
 
