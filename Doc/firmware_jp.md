@@ -10,6 +10,7 @@
 2. helix/rev2 にします
 3. Loadボタンを押しダウンロードします
 
+※Loadボタンを押すとエラーが出てしまう場合は、[こちら](http://qmk.fm/compiled/helix_rev2_default.hex)をダウンロードして 「Open」よりダウンロードしたファイルを選択してください。
 
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
