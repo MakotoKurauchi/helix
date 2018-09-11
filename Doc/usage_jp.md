@@ -32,7 +32,7 @@ Helixは通常のキーボードと比較して明らかにキーの数が足り
 具体例をあげると、RaiseとLowerをQwertyに重ねたのが下の画像です。  
 例えばピンクのRaiserキーを押しながらaを押すと、F1キーなります。
 
-![Imgur](https://i.imgur.com/lVZiYqM.png)
+![Imgur](https://i.imgur.com/10R4O2P.jpg)
 
 次にAdjustとQwertyを重ねたのが下の画像です。  
 例えばAdjustを押しながらqを押すとキーボードがリセットされ、書き込みモードになります。（リセットスイッチを押したときと同じ状態）
