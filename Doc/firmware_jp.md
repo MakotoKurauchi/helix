@@ -11,8 +11,8 @@
 
 
 - オプション無し: [helix_rev2_default.hex](http://qmk.fm/compiled/helix_rev2_default.hex)
-- OLED & バックライト: [helix_rev2_default_oled_backlight.hex](https://github.com/MakotoKurauchi/helix/blob/master/Hex/helix_rev2_default_oled_backlight.hex)
-- OLED & Underglow: [helix_rev2_default_oled_underglow.hex](https://github.com/MakotoKurauchi/helix/blob/master/Hex/helix_rev2_default_oled_underglow.hex)
+- OLED & バックライト: [helix_rev2_default_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_backlight.hex)
+- OLED & Underglow: [helix_rev2_default_oled_underglow.hex]https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_underglow.hex)
 
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
