@@ -4,13 +4,15 @@
 
 [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)を使えばビルドなどの手順を踏まずにキーボードとしての動作を確認出来ます。
 
-![Imgur](https://i.imgur.com/MiVj7jo.png)
+![Imgur](https://i.imgur.com/75BHCKI.png)
 
 1. atmega32u4 になってるか確認します
-2. helix/rev2 にします
-3. Loadボタンを押しダウンロードします
+2. Helixの構成に合わせて下記のいずれかのHexファイルをダウンロードし、Openボタンでそのファイルを選択してください。
 
-※Loadボタンを押すとエラーが出てしまう場合は、[こちら](http://qmk.fm/compiled/helix_rev2_default.hex)をダウンロードして 「Open」よりダウンロードしたファイルを選択してください。
+
+- オプション無し: [helix_rev2_default.hex](http://qmk.fm/compiled/helix_rev2_default.hex)
+- OLED & バックライト: [helix_rev2_default_oled_backlight.hex](https://github.com/MakotoKurauchi/helix/blob/master/Hex/helix_rev2_default_oled_backlight.hex)
+- OLED & Underglow: [helix_rev2_default_oled_underglow.hex](https://github.com/MakotoKurauchi/helix/blob/master/Hex/helix_rev2_default_oled_underglow.hex)
 
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
@@ -23,7 +25,7 @@
 
 Helixで文字が打てるようになったでしょうか？
 
-配列を変えたり、LEDやOLEDを使いたいときは次から説明するファームウェアのビルドに挑戦してみましょう。
+配列を変えたいときは次から説明するファームウェアのビルドに挑戦してみましょう。
 
 ## カスタマイズしたい時
 下記ページよりQMKファームウェアをダウンロードします。
