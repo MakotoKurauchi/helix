@@ -58,16 +58,16 @@ To control the LED backlighting and underglow, the keys on the adjust layer are 
 |Value Increase|Adjust + Enter|RGB_VAI|
 |Value Decrease|Adjust + Right|RGB_VAD|
 
-## MacモードとWinモードの切り替え
+## Switching between Mac and Windows mode
 
-MacモードはEISUキーとKANAキーがそれぞれ英数キーとかなキーとして入力されます。
+In Mac mode, the EISU and Kana keys function as English/Numerics and Kana input keys respectively.
 
-WinモードはEISUキーとKANAキーが共に Alt + `（日本語IMEの切り替え）として入力されます。  
-また、<font color="Red">AltキーとGUIキーが入れ替わります</font>。
+In Windows mode, the EISU and Kana keys both function as Alt + ` (Japanese IME switcher).
+Also, <font color="Red">the Alt and GUI keys are swapped.</font>。
 
-現在のモードはOLEDにアイコンとして表示されます。
+The current mode is displayed on the OLED display.
 
-|コマンド|デフォルトレイアウト|コード|
+|Command|Default Layout|Keycode|
 | ---- | ---- | --- |
-|Macモード|Adjust + g|AG_NORM|
-|Winモード|Adjust + h|AG_SWAP|
+|Mac Mode|Adjust + g|AG_NORM|
+|Windows Mode|Adjust + h|AG_SWAP|
