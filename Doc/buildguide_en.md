@@ -70,14 +70,14 @@ Please solder the four jumpers on the __upper side__ of the PCB on both halves.
 
 
 
-### パーツ実装
+### Installing Parts
 
-#### ダイオード
+#### Diodes
 
-リードタイプ、チップタイプ共にPCBの**下面側**から実装します。
+Install diodes onto the __bottom__, whether through-hole or surface mount.
 
-ダイオードには向きがあるので注意してください。
-シルクが見えなくなっているところがありますが、全て同じ方向なので他に合わせてください。
+Make sure all diodes are installed in the correct orientation.
+Even when the silk label is invisible, all diodes face the same orientation.
 
 
 ![Imgur](https://i.imgur.com/HNnsSsT.jpg?2)
