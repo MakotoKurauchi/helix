@@ -84,97 +84,94 @@ For flashing via GUI, use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/relea
 
 Both halves must be flashed.
 
-## カスタマイズ
+## Customize
 
-/keyboards/helix/rev2/keymaps/ にある default フォルダを複製して好きな名前にします。
-以後、それを修正します。
+Copy and rename the `default` folder in `/keyboards/helix/rev2/keymaps/`. 
+This new folder will be used from now on.
 
-その時のビルドコマンドは以下のようになります。
+For building this new keymap, the following command will be used:
 
-    make helix:<あなたのkeymap名>
+    make helix:<new keymap folder name>
 
-## キーマップを変更する
+## Editing the keymaps
 
-デフォルトのキーマップは下記のようになっています。これは
-keymap.c
-を修正することで自由に変更することが出来ます。
+The default keymap is stored in keymap.c. It can be edited to modify the keymap freely.
 
-キーコードは[リファレンス](https://docs.qmk.fm/keycodes.html)などを参照してください。
+Please see [this page](https://docs.qmk.fm/keycodes.html) for a keycode reference.
 
 ![Imgur](https://i.imgur.com/YxZT1TL.png)
 
-## 4行版に対応する
+## Making the keymap 4 rows
 
-キーマップ内の rules.mk にある HELIX_ROWS を 5 から 4 に変更します。
+Within the folder, change the field HELIX_ROWS rules.mk from 5 to 4.
 
     HELIX_ROWS = 4
 
-## RGBバックライトを有効にする
+## Enable RGB backlighting
 
-キーマップ内の rules.mk にある LED_BACK_ENABLE を no から yes に変更します。
+In the same file, change the LED_BACK_ENABLE from no to yes.
 
     LED_BACK_ENABLE = yes
 
-##  Underglow を有効にする
+##  Enable RGB underglow
 
-キーマップ内の rules.mk にある LED_UNDERGLOW_ENABLE を no から yes に変更します。
+Again in the same file, change LED_UNDERGLOW_ENABLE from no to yes.
 
     LED_UNDERGLOW_ENABLE = yes
 
-## OLEDを有効にする
+## Enable OLED display
 
-キーマップ内の rules.mk にある OLED_ENABLE を no から yes に変更します。
+Again in the same file, change OLED_ENABLE from no to yes.
 
     OLED_ENABLE = yes
 
 
-### フォントデータのカスタマイズ
-フォントデータは helix/common/glcdfont.c です。
-こちらを下記のいずれかの方法で編集することでOLED表示のカスタマイズが出来ます。
+### Edit font data
+The font data is stored in helix/common/glcdfont.c.
+This data can be edited in the following ways for modifying OLED content.
 
-#### Web Toolで編集
+#### Using the web tool
 
-[@teri_yakichan](https://twitter.com/teri_yakichan) さんが作成した、ブラウザでglcdfont.cを編集するツールが便利です。
+The web tool created by [@teri_yakichan](https://twitter.com/teri_yakichan) can be used to modify the file easily.
 
 [Helix Font Editor](http://teripom.x0.com/)
 
-#### 画像エディタで編集
+#### Using an image editor
 
-画像エディタを使いたいときは、下記の手順で一旦画像化してから編集し再度テキスト化します。
+To use an image editor, do the following to convert text to image.
 
-1. glcdfont.c からデータ部分のみを抜き出してテキストファイルを作る  
+1. Take the image data from glcdfont.c and move it to a text file.
 0x00, 0x00 ... 0x00
-2. スクリプトで画像に変換する
-3. 画像を修正する
-4. スクリプトでテキストに戻す
-5. glcdfont.c に反映させる
+2. Use the script to convert to image
+3. Edit the image
+4. Use the script to convert back to text
+5. Insert to glcdfont.c
 
-編集画像のイメージ
+An example image being edited:
 
 ![Font](https://i.imgur.com/adJX6CX.png)
 
-スクリプトはこちらを使用します。
+The following script is used for conversion.
 https://github.com/MakotoKurauchi/helix/tree/master/FontConverter
 
-テキストから画像への変換
+Converting text to image
 
     $ python3 hex2img.py inHex.txt outImage
 
-画像からテキストへの変換
+Converting image to text
 
     $ python3 img2hex.py inImage.bmp > outHex.txt
 
-### キーマップ毎にフォントデータを用意する
+### Creating a font data specific to the keymap
 
-helix/common/glcdfont.c を修正してしまうと全てのキーマップに影響が出ます。キーマップ独自のフォントファイルを用意したい時は、まず下記のようにキーマップ内の rules.mk にある LOCAL_GLCDFONT を no から yes に変更します。
+Editing helix/common/glcdfont.c affects all keymaps. To make a font data unique to a keymap, edit the LOCAL_GLCDFONT field in rules.mk:
 
     LOCAL_GLCDFONT = yes
 
-次に glcdfont.c を helixfont.h とリネームして keymap.c と同じ階層に複製します。
+Then, rename glcdfont.c to helixfont.h and place it in the same directory as keymap.c.
 
 
 
+## Other customization
 
-## それ以外のカスタマイズ
-
-QMKは沢山の機能があります。[リファレンス](https://docs.qmk.fm)や他の人のカスタマイズを参考にして自分だけの最高のHelixを作って下さいね！
+QMK has many features. See the [docs](https://docs.qmk.fm) and others' customizations to build your own unique helix.
