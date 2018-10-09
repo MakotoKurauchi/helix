@@ -1,51 +1,51 @@
-# ファームウェア
+# Firmware
 
-## とりあえず動作を確認したい
+## To Simply Verify Function
 
-[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)を使えばビルドなどの手順を踏まずにキーボードとしての動作を確認出来ます。
+It is possible to verify functionality without building using [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases).
 
 ![Imgur](https://i.imgur.com/75BHCKI.png)
 
-1. atmega32u4 になってるか確認します
-2. Helixの構成に合わせて下記のいずれかのHexファイルをダウンロードし、Openボタンでそのファイルを選択してください。
+1. Verify that an atmega32u4 is detected
+2. Download any of the firmwares below which suits the options selected, and open it in QMK Toolbox
 
 
-- オプション無し: [helix_rev2_default.hex](http://qmk.fm/compiled/helix_rev2_default.hex)
-- 5行版 OLED & バックライト: [helix_rev2_default_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_backlight.hex)
-- 5行版 OLED & Underglow: [helix_rev2_default_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_underglow.hex)
-- 4行版 OLED & バックライト: [helix_rev2_default_4rows_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_backlight.hex)
-- 4行版 OLED & Underglow: [helix_rev2_default_4rows_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_underglow.hex)
+- No options: [helix_rev2_default.hex](http://qmk.fm/compiled/helix_rev2_default.hex)
+- 5-row OLED and backlight: [helix_rev2_default_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_backlight.hex)
+- 5-row OLED and underglow: [helix_rev2_default_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_underglow.hex)
+- 4-row OLED and backlight: [helix_rev2_default_4rows_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_backlight.hex)
+- 4-row OLED and underglow: [helix_rev2_default_4rows_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_underglow.hex)
 - 
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
-1. Helixのリセットボタンを押し、Connected とメッセージが出るのを確認します
-2. すぐにFlashボタンを押します
+1. Press the reset button on helix, and verify that it shows as "connected"
+2. Immediately press flash
 
 ![Imgur](https://i.imgur.com/dH2Wser.png)
 
-このようなメッセージが出れば書き込み終了です
+If a message similar to this appears, flashing has succeeded.
 
-Helixで文字が打てるようになったでしょうか？
+Please verify that typing is possible using these firmwares.
 
-配列を変えたいときは次から説明するファームウェアのビルドに挑戦してみましょう。
+To change the layout, use the build guide below.
 
-## カスタマイズしたい時
-下記ページよりQMKファームウェアをダウンロードします。
+## To Customize
+Download QMK Firmware from the following:
 
 https://github.com/qmk/qmk_firmware/
 
-（緑色の"Clone or download"ボタンをクリックし、"Download ZIP"をもう一度クリックしてZIPファイルをダウンロードします。）
+(Press the green "Clone or download" button, and then "Download ZIP" to obtain a ZIP file.)
 
-そしてダウンロードしたZIPファイルを好きな場所へ伸張しておきます。
+Extract after download.
 
-gitに慣れている方はクローンの方が良いでしょう。
+If familiar with git, a `git clone` may be more suitable.
 
-## ビルド環境を作る
+## Setting up the build environment
 ### macOS
- [homebrew](https://brew.sh)を使う手順を説明します。
-1. ターミナルを起動します
-1. [homebrew](https://brew.sh)を使っていなかったらインストールしておきます
-1. 次に下記のコマンドをそれぞれ実行します
+ [homebrew](https://brew.sh) will be used in this guide.
+1. Launch terminal
+1. Install [homebrew](https://brew.sh) if not installed yet.
+1. Run the following commands:
 
 ```
 brew tap osx-cross/avr
@@ -59,30 +59,30 @@ brew install avrdude
 
 ### Windows
 
-[msys2](http://www.msys2.org/)を使う手順を説明します。
+[msys2](http://www.msys2.org/) will be used.
 
-1. [msys2](http://www.msys2.org/)のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
-  - 32bit OSの時 : msys2-i686-xxxxxxx.exe
-  - 64bit OSの時 : msys2-x86_64-xxxxxxxx.exe
-1. msys2を起動します
-1. ダウンロードしておいたQMKファームウェアのフォルダに移動します（ここではcドライブ直下にあるものとします）`cd /c/qmk_firmware/`
-1. `util/msys2_install.sh` と実行します
-1. インストールするパッケージを聞かれますので答えていきます（分からなければ全て`Y`とします）
-1. 終わったらmsys2を再起動します
+1. Visit the [msys2](http://www.msys2.org/) website, and download the installer suited for your PC:
+  - 32bit: msys2-i686-xxxxxxx.exe
+  - 64bit: msys2-x86_64-xxxxxxxx.exe
+1. Launch msys2.
+1. Move the QMK firmware folder to the folder (This guide assumes msys2 installed to the C drive): `cd /c/qmk_firmware/`
+1. Run `util/msys2_install.sh` 
+1. The installer will ask you which packages to install (When in doubt, respond `Y` to install)
+1. When complete, restart msys2.
 
-## ビルドと書き込み
+## Build and flash
 
-QMKファームウェアの第一階層で以下のようにします。
+Run the following at the root directory of the QMK folder:
 
     make helix:default
 
-キーボードへの書き込みまで同時に行うには下記のように`:avrdude`を付けます。
+To flash at the same time, attach `:avrdude` to the command:
 
     make helix:default:avrdude
 
-GUIでの書き込みには冒頭で説明した[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)が使えます。
+For flashing via GUI, use [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) as described earlier.
 
-左右のキーボードとも同様に書き込みが必要です。
+Both halves must be flashed.
 
 ## カスタマイズ
 

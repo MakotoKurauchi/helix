@@ -165,7 +165,7 @@ Be careful of solder bridges when other parts are close by.
 
 ![Imgur](https://i.imgur.com/w8b6SMt.jpg)
 
-* At this point, it is recommended to flash the [firmware](firmware_jp.md), and to verify that everything functions properly.
+* At this point, it is recommended to flash the [firmware](firmware_en.md), and to verify that everything functions properly.
 
 
 ### Final Assembly
