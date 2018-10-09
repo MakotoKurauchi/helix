@@ -1,62 +1,62 @@
-# 使い方
+# Usage Guide
 
-Helixの使い方をデフォルトキーマップで説明します。
+The usage of Helix is described using the default keymap.
 
-## 左右の接続
+## Connection between the halves
 
-左右の接続には3極（TRS）もしくは4極（TRRS）のステレオオーディオミニプラグを使用します。  
-（LEDやOLEDを使用する場合でも3極で問題ありません）
+Either a TRS or TRRS 3.5mm aux cable is used.  
+(Even with LEDs or OLEDs, a TRS cable works fine.)
 
-※故障する恐れがありますのでUSBケーブルを繋げたままでの挿抜はしないでください。
+* To avoid damage, always connect the aux cable __first__ and USB cable after the halves are connected.
 
 ![Imgur](https://i.imgur.com/1alxKG2.jpg)
 
 
-## レイヤー
+## Layers
 
-Helixは通常のキーボードと比較して明らかにキーの数が足りません。  
-キーマップはレイヤーを重ねた多層構造になっており、収まらないキーやHelixの設定を変える機能キーは別のレイヤーに入っています。
+The Helix obviously does not have enough keys compared to a typical keyboard.  
+The keymap has multiple layers, moving extra keys to different layers.
 
-|優先順位|レイヤー番号|レイヤー名|内容|
+|Priority|Layer ID|Layer Name|Contents|
 | ---- | ---- | --- | --- |
-|高い|5|Adjust|機能キー|
-||4|Raise|記号類（ピンク）|
-||3|Lower|記号類（ブルー）|
-||2|Dvorak|Dvorak配列|
-||1|Colemak|Colemak配列|
-|低い|0|Qwerty|QWERTY配列（ベース）|
+|High|5|Adjust|Function Keys|
+||4|Raise|Symbols (Pink)|
+||3|Lower|Symbols (Blue)|
+||2|Dvorak|Dvorak layout|
+||1|Colemak|Colemak layout|
+|Low|0|Qwerty|Qwerty layout (Base)|
 
 
-ベースレイヤー以外は普段は隠れていますが、対応するレイヤーキーを押すことで現在の配列の上にそのレイヤーが現れます。重なったところは、レイヤー番号が大きいほうが優先順位が高くなりますので、キーコードが変わることになります。
+Usually hidden, the layers above the base layer appear by using the layer adjust keys. Wherever keys overlap, the keys with higher priority replace the keys below it.
 
-具体例をあげると、RaiseとLowerをQwertyに重ねたのが下の画像です。  
-例えばピンクのRaiserキーを押しながらaを押すと、F1キーなります。
+For example, here is an example of "Raise" and "Lower" overlaid above the base.
+For example, holding the pink raiser key when pressing `a` registers the F1 key.
 
 ![Imgur](https://i.imgur.com/10R4O2P.jpg)
 
-次にAdjustとQwertyを重ねたのが下の画像です。  
-例えばAdjustを押しながらqを押すとキーボードがリセットされ、書き込みモードになります。（リセットスイッチを押したときと同じ状態）
+Next, here is the adjust layer overlaid onto base.  
+For example, pressing `q` while holding Adjust sends the reset keycode, making the keyboard enter its bootloader (Same as pressing the reset button).
 
 ![Imgur](https://i.imgur.com/jaYTsNM.png)
 
-また、デフォルトキーマップでは、Lower + Raiseの同時押しはAdjustとなるようにしています。
+On the default keymap, pressing Raise and Lower together registers Adjust.
 
 
-## LEDコントロール
+## LED Control
 
-バックライトやUnderglowをコントロールするにはAdjustレイヤーにある機能キーを使います。
+To control the LED backlighting and underglow, the keys on the adjust layer are used.
 
-|コマンド|デフォルトレイアウト|コード|
+|Command|Default Layout|Keycode|
 | ---- | ---- | --- |
-|オン／オフ|Adjust + ,|RGB_TOG|
-|モード|Adjust + Left|RGB_SMOD|
-|リセット|Adjust + w|RGBRST|
-|色相 +|Adjust + .|RGB_HUI|
-|色相 -|Adjust + Down|RGB_HUD|
-|彩度 +|Adjust + /|RGB_SAI|
-|彩度 -|Adjust + Up|RGB_SAD|
-|明度 +|Adjust + Enter|RGB_VAI|
-|明度 -|Adjust + Right|RGB_VAD|
+|On/Off|Adjust + ,|RGB_TOG|
+|Mode|Adjust + Left|RGB_SMOD|
+|Reset|Adjust + w|RGBRST|
+|Hue Increase|Adjust + .|RGB_HUI|
+|Hue Decrease|Adjust + Down|RGB_HUD|
+|Saturation Increase|Adjust + /|RGB_SAI|
+|Saturation Decrease|Adjust + Up|RGB_SAD|
+|Value Increase|Adjust + Enter|RGB_VAI|
+|Value Decrease|Adjust + Right|RGB_VAD|
 
 ## MacモードとWinモードの切り替え
 
