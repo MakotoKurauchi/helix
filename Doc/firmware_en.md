@@ -97,7 +97,7 @@ For building this new keymap, the following command will be used:
 
 The default keymap is stored in keymap.c. It can be edited to modify the keymap freely.
 
-Please see [this page](https://docs.qmk.fm/keycodes.html) for a keycode reference.
+Please see [this page](https://docs.qmk.fm/#/keycodes) for a keycode reference.
 
 ![Imgur](https://i.imgur.com/YxZT1TL.png)
 
