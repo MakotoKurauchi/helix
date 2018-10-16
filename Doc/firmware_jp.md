@@ -99,7 +99,7 @@ GUIでの書き込みには冒頭で説明した[QMK Toolbox](https://github.com
 keymap.c
 を修正することで自由に変更することが出来ます。
 
-キーコードは[リファレンス](https://docs.qmk.fm/keycodes.html)などを参照してください。
+キーコードは[リファレンス](https://docs.qmk.fm/#/keycodes)などを参照してください。
 
 ![Imgur](https://i.imgur.com/YxZT1TL.png)
 
