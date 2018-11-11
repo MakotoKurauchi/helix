@@ -29,9 +29,9 @@ The list below is for one half. To build both halves, you will need two sets of 
 | Insulating Sheet | 1 | For stainless steel plates (Optional) |
 | WS2812B Strip (6 LEDs) | 1 | For underglow (Optional) |
 | SK6812mini | 32 | For backlight (Optional) |
-| OLED Module | 1 | For OLED dispaly (Optional) |
-| Socket, 4-Pin | 1 | For OLED dispaly (Optional) |
-| Headers, 4-Pin | 1 | For OLED dispaly (Optional) |
+| OLED Module | 1 | For OLED display (Optional) |
+| Socket, 4-Pin | 1 | For OLED display (Optional) |
+| Headers, 4-Pin | 1 | For OLED display (Optional) |
 
 ## Necessary Tools
 
