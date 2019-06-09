@@ -136,7 +136,7 @@ keymap.c
 
 [@teri_yakichan](https://twitter.com/teri_yakichan) さんが作成した、ブラウザでglcdfont.cを編集するツールが便利です。
 
-[Helix Font Editor](http://teripom.x0.com/)
+[Helix Font Editor](https://helixfonteditor.netlify.com/)
 
 #### 画像エディタで編集
 

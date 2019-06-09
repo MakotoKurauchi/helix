@@ -134,7 +134,7 @@ This data can be edited in the following ways for modifying OLED content.
 
 The web tool created by [@teri_yakichan](https://twitter.com/teri_yakichan) can be used to modify the file easily.
 
-[Helix Font Editor](http://teripom.x0.com/)
+[Helix Font Editor](https://helixfonteditor.netlify.com/)
 
 #### Using an image editor
 
