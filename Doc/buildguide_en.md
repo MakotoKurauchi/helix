@@ -74,7 +74,7 @@ Please solder the four jumpers on the __upper side__ of the PCB on both halves.
 
 #### Diodes
 
-Install diodes onto the __bottom__, whether through-hole or surface mount.
+Install diodes onto the __bottom__, whether through-hole or surface mount.  Note: if using choc low profile switches surface mount diodes are recommended as through hole diode legs would need to be flush on the top of the board to allow the top plate to sit correctly.  See issue [22](https://github.com/MakotoKurauchi/helix/issues/22) for details and work arounds.
 
 Make sure all diodes are installed in the correct orientation.
 Even when the silk label is invisible, all diodes face the same orientation.
@@ -89,7 +89,7 @@ Even when the silk label is invisible, all diodes face the same orientation.
 Backlight LEDs are installed from the **bottom** of the PCB. Verify the orientation of the LEDs when installing - the largest pad should align with the corner marked with the circle on the silkscreen layer.
 
 
-There are some places where this silkscreen is invisible; however, all LEDs of each row face the same orientation. However, not all rows share the same orientation.
+There are some places where this silkscreen is invisible; however, all LEDs of each row face the same orientation. However, **not all rows share the same orientation** (they switch orientation by 180 degrees each row).
 
 Using a variable temperature soldering iron, solder the LEDs into place at roughly 220C (428F). __Overheating the LEDs will destroy the LEDs.__
 
