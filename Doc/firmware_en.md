@@ -15,7 +15,7 @@ It is possible to verify functionality without building using [QMK Toolbox](http
 - 5-row OLED and underglow: [helix_rev2_default_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_underglow.hex)
 - 4-row OLED and backlight: [helix_rev2_default_4rows_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_backlight.hex)
 - 4-row OLED and underglow: [helix_rev2_default_4rows_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_underglow.hex)
-- 
+-
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
 1. Press the reset button on helix, and verify that it shows as "connected"
@@ -29,46 +29,12 @@ Please verify that typing is possible using these firmwares.
 
 To change the layout, use the build guide below.
 
-## To Customize
-Download QMK Firmware from the following:
-
-https://github.com/qmk/qmk_firmware/
-
-(Press the green "Clone or download" button, and then "Download ZIP" to obtain a ZIP file.)
-
-Extract after download.
-
-If familiar with git, a `git clone` may be more suitable.
 
 ## Setting up the build environment
-### macOS
- [homebrew](https://brew.sh) will be used in this guide.
-1. Launch terminal
-1. Install [homebrew](https://brew.sh) if not installed yet.
-1. Run the following commands:
 
-```
-brew tap osx-cross/avr
-brew tap PX4/homebrew-px4
-brew update
-brew install avr-gcc@7
-brew install dfu-programmer
-brew install gcc-arm-none-eabi
-brew install avrdude
-```
+Create the build environment according to the official guide of QMK.
 
-### Windows
-
-[msys2](http://www.msys2.org/) will be used.
-
-1. Visit the [msys2](http://www.msys2.org/) website, and download the installer suited for your PC:
-  - 32bit: msys2-i686-xxxxxxx.exe
-  - 64bit: msys2-x86_64-xxxxxxxx.exe
-1. Launch msys2.
-1. Move the QMK firmware folder to the folder (This guide assumes msys2 installed to the C drive): `cd /c/qmk_firmware/`
-1. Run `util/msys2_install.sh` 
-1. The installer will ask you which packages to install (When in doubt, respond `Y` to install)
-1. When complete, restart msys2.
+https://docs.qmk.fm/#/newbs_getting_started
 
 ## Build and flash
 
@@ -86,7 +52,7 @@ Both halves must be flashed.
 
 ## Customize
 
-Copy and rename the `default` folder in `/keyboards/helix/rev2/keymaps/`. 
+Copy and rename the `default` folder in `/keyboards/helix/rev2/keymaps/`.
 This new folder will be used from now on.
 
 For building this new keymap, the following command will be used:

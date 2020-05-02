@@ -15,7 +15,7 @@
 - 5行版 OLED & Underglow: [helix_rev2_default_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_oled_underglow.hex)
 - 4行版 OLED & バックライト: [helix_rev2_default_4rows_oled_backlight.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_backlight.hex)
 - 4行版 OLED & Underglow: [helix_rev2_default_4rows_oled_underglow.hex](https://raw.githubusercontent.com/MakotoKurauchi/helix/master/Hex/helix_rev2_default_4rows_oled_underglow.hex)
-- 
+-
 ![Imgur](https://i.imgur.com/hLygSgB.png)
 
 1. Helixのリセットボタンを押し、Connected とメッセージが出るのを確認します
@@ -29,46 +29,12 @@ Helixで文字が打てるようになったでしょうか？
 
 配列を変えたいときは次から説明するファームウェアのビルドに挑戦してみましょう。
 
-## カスタマイズしたい時
-下記ページよりQMKファームウェアをダウンロードします。
-
-https://github.com/qmk/qmk_firmware/
-
-（緑色の"Clone or download"ボタンをクリックし、"Download ZIP"をもう一度クリックしてZIPファイルをダウンロードします。）
-
-そしてダウンロードしたZIPファイルを好きな場所へ伸張しておきます。
-
-gitに慣れている方はクローンの方が良いでしょう。
 
 ## ビルド環境を作る
-### macOS
- [homebrew](https://brew.sh)を使う手順を説明します。
-1. ターミナルを起動します
-1. [homebrew](https://brew.sh)を使っていなかったらインストールしておきます
-1. 次に下記のコマンドをそれぞれ実行します
 
-```
-brew tap osx-cross/avr
-brew tap PX4/homebrew-px4
-brew update
-brew install avr-gcc@7
-brew install dfu-programmer
-brew install gcc-arm-none-eabi
-brew install avrdude
-```
+QMKの公式ガイドに従いビルド環境を作ります。
 
-### Windows
-
-[msys2](http://www.msys2.org/)を使う手順を説明します。
-
-1. [msys2](http://www.msys2.org/)のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
-  - 32bit OSの時 : msys2-i686-xxxxxxx.exe
-  - 64bit OSの時 : msys2-x86_64-xxxxxxxx.exe
-1. msys2を起動します
-1. ダウンロードしておいたQMKファームウェアのフォルダに移動します（ここではcドライブ直下にあるものとします）`cd /c/qmk_firmware/`
-1. `util/msys2_install.sh` と実行します
-1. インストールするパッケージを聞かれますので答えていきます（分からなければ全て`Y`とします）
-1. 終わったらmsys2を再起動します
+https://docs.qmk.fm/#/ja/newbs_getting_started
 
 ## ビルドと書き込み
 
