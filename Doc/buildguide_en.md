@@ -136,6 +136,8 @@ Also, install so both sets of headers have the small windows facing the same ori
 
 Installing in the wrong orientation or applying significant force before soldering will lead to the pins ejecting. Also, the legs are easily bent; please take care when inserting and removing the Pro Micro from the PCB.
 
+Note the Pro Micro should be installed with the pins going through the holes outlined in white on the top of the board (The outside column on the left half, and the inside column on the right half)
+
 With the bottom side up, insert the header-loaded Pro Micro onto the through-hole pads. Even without soldering, it should lock into place.
 
 ![Imgur](https://i.imgur.com/Hj5YHhp.jpg)
